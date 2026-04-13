@@ -175,7 +175,8 @@ p {
 }
 
 .header-logo img {
-  height: 40px;
+  height: 44px;
+  filter: invert(1);
   transition: opacity var(--transition);
 }
 
@@ -1124,6 +1125,7 @@ p {
 
 .footer-brand img {
   height: 36px;
+  filter: invert(1);
   margin-bottom: 20px;
 }
 
@@ -1187,7 +1189,8 @@ p {
 }
 
 .preloader-logo {
-  height: 50px;
+  height: 60px;
+  filter: invert(1);
   animation: preloaderPulse 1.5s ease-in-out infinite;
 }
 
@@ -1759,6 +1762,13 @@ body:not(.loaded) {
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 32px;
+    text-align: center;
+  }
+
+  .footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .footer-bottom {
