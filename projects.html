@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | A Design Studio</title>
+  <meta name="description" content="Explore our portfolio of 3D architectural visualization projects - interiors, exteriors, and landscapes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="assets/images/logo.jpg">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <a href="index.html" class="header-logo">
+      <img src="assets/images/logo.jpg" alt="A Design Studio">
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="contact.html">Contact</a>
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-primary">Get Quote</a>
+      </div>
+    </nav>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="projects.html" class="active">Projects</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn-primary" style="margin-top: 20px;">Get Quote</a>
+  </div>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container" style="text-align: center;">
+      <span class="section-label">Portfolio</span>
+      <h1>Our Projects</h1>
+      <p>A showcase of our 3D visualization work across architecture, interiors, and exteriors.</p>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section class="section">
+    <div class="container">
+
+      <!-- Filter Bar -->
+      <div class="filter-bar fade-in">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="exterior">Exterior</button>
+        <button class="filter-btn" data-filter="interior">Interior</button>
+        <button class="filter-btn" data-filter="landscape">Landscape</button>
+      </div>
+
+      <!-- Portfolio Grid -->
+      <div class="portfolio-grid">
+
+        <div class="portfolio-item fade-in delay-1" data-category="exterior" data-lightbox>
+          <img src="assets/images/IMG_20260413_114236_770.jpg" alt="Classical Villa - Front Elevation">
+          <div class="portfolio-info">
+            <span class="project-category">Exterior</span>
+            <span class="project-title">Classical Villa - Front Elevation</span>
+          </div>
+        </div>
+
+        <div class="portfolio-item fade-in delay-2" data-category="exterior" data-lightbox>
+          <img src="assets/images/IMG_20260413_114241_477.jpg" alt="Classical Villa - Street View">
+          <div class="portfolio-info">
+            <span class="project-category">Exterior</span>
+            <span class="project-title">Classical Villa - Street View</span>
+          </div>
+        </div>
+
+        <div class="portfolio-item fade-in delay-3" data-category="exterior" data-lightbox>
+          <img src="assets/images/IMG_20260413_152232_942.jpg" alt="Classical Villa - Perspective">
+          <div class="portfolio-info">
+            <span class="project-category">Exterior</span>
+            <span class="project-title">Classical Villa - Perspective</span>
+          </div>
+        </div>
+
+        <div class="portfolio-item fade-in delay-1" data-category="exterior" data-lightbox>
+          <img src="assets/images/IMG_20260413_152232_942.jpg" alt="Classical Villa - Side Angle">
+          <div class="portfolio-info">
+            <span class="project-category">Exterior</span>
+            <span class="project-title">Classical Villa - Side Angle</span>
+          </div>
+        </div>
+
+        <div class="portfolio-item fade-in delay-2" data-category="exterior" data-lightbox>
+          <img src="assets/images/IMG_20260413_114236_770.jpg" alt="Classical Villa - Detail View">
+          <div class="portfolio-info">
+            <span class="project-category">Exterior</span>
+            <span class="project-title">Classical Villa - Detail View</span>
+          </div>
+        </div>
+
+        <div class="portfolio-item fade-in delay-3" data-category="exterior" data-lightbox>
+          <img src="assets/images/IMG_20260413_114241_477.jpg" alt="Classical Villa - Evening">
+          <div class="portfolio-info">
+            <span class="project-category">Exterior</span>
+            <span class="project-title">Classical Villa - Evening</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="container fade-in">
+      <span class="section-label">Start Your Project</span>
+      <h2>Have a Project in Mind?</h2>
+      <p>Let's work together to create stunning visualizations for your architectural project.</p>
+      <div class="btn-group" style="justify-content: center;">
+        <a href="contact.html" class="btn btn-primary">Start Your Project</a>
+        <a href="services.html" class="btn btn-outline">View Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox">
+    <button class="lightbox-close">&times;</button>
+    <img src="" alt="Project Preview">
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/images/logo.jpg" alt="A Design Studio">
+          <p>Specializing in high-quality 3D visualizations for architecture, interiors, exteriors, and landscapes.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="services.html">Services</a>
+          <a href="projects.html">Projects</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="services.html">3D Visualization</a>
+          <a href="services.html">Interior Design</a>
+          <a href="services.html">Exterior Design</a>
+          <a href="services.html">Landscape Design</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="mailto:adesignstudio2005@gmail.com">adesignstudio2005@gmail.com</a>
+          <a href="contact.html">Get Quote</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 A Design Studio. All rights reserved.</p>
+        <p>Crafted with precision</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
