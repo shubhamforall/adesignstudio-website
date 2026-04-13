@@ -174,8 +174,7 @@ p {
 }
 
 .header-logo img {
-  height: 36px;
-  filter: invert(1) brightness(2);
+  height: 40px;
   transition: opacity var(--transition);
 }
 
@@ -1114,8 +1113,7 @@ p {
 }
 
 .footer-brand img {
-  height: 40px;
-  filter: invert(1) brightness(2);
+  height: 36px;
   margin-bottom: 20px;
 }
 

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 80" fill="none">
+  <!-- AD Monogram -->
+  <g fill="#ffffff">
+    <!-- Letter A -->
+    <path d="M18 58L30.5 18h1.5L44.5 58h-4l-3.5-11H25.5L22 58h-4zm9-15h12.5L33 24.5 27 43z"/>
+    <!-- Letter D overlapping -->
+    <path d="M38 18h10c4.5 0 8 1.2 10.5 3.5S62 26.5 62 31v6c0 4.5-1.2 8-3.5 10.5S53 51 48.5 51H38V18zm4.5 4v25h5.5c3.2 0 5.7-1 7.5-3s2.7-4.7 2.7-8v-3c0-3.3-.9-5.8-2.7-7.8s-4.3-3.2-7.5-3.2h-5.5z"/>
+  </g>
+  <!-- Divider line -->
+  <line x1="72" y1="20" x2="72" y2="58" stroke="rgba(201,169,110,0.5)" stroke-width="0.8"/>
+  <!-- A DESIGN STUDIO text -->
+  <g fill="#ffffff">
+    <text x="82" y="34" font-family="'Montserrat', Arial, sans-serif" font-size="11" font-weight="500" letter-spacing="3" text-transform="uppercase">A DESIGN</text>
+    <text x="82" y="52" font-family="'Montserrat', Arial, sans-serif" font-size="11" font-weight="300" letter-spacing="5" text-transform="uppercase">STUDIO</text>
+  </g>
+</svg>
