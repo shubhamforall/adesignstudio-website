@@ -5,22 +5,25 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // --- Preloader ---
-  const preloader = document.querySelector('.preloader');
-  if (preloader) {
-    window.addEventListener('load', () => {
-      setTimeout(() => {
-        preloader.classList.add('loaded');
-        document.body.classList.add('loaded');
-      }, 800);
-    });
-    // Fallback
-    setTimeout(() => {
-      preloader.classList.add('loaded');
-      document.body.classList.add('loaded');
-    }, 3000);
-  } else {
-    document.body.classList.add('loaded');
+  // --- Render gallery from GALLERY_DATA (must run before other features attach) ---
+  const portfolioGrid = document.getElementById('portfolio-grid');
+  if (portfolioGrid && typeof GALLERY_DATA !== 'undefined') {
+    const escape = (s) => String(s).replace(/[&<>"']/g, c => ({
+      '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+    }[c]));
+
+    portfolioGrid.innerHTML = GALLERY_DATA.map((item, i) => {
+      const delay = (i % 3) + 1;
+      const src = 'assets/images/' + item.file;
+      return `
+        <div class="portfolio-item fade-in delay-${delay}" data-category="${escape(item.category)}" data-lightbox>
+          <img src="${encodeURI(src)}" alt="${escape(item.label)}" loading="lazy">
+          <div class="portfolio-info">
+            <span class="project-category">A Design Studio</span>
+            <span class="project-title">${escape(item.label)}</span>
+          </div>
+        </div>`;
+    }).join('');
   }
 
   // --- Header scroll effect ---
@@ -116,9 +119,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- Hero parallax background ---
+  // --- Hero parallax background (desktop only) ---
   const heroBg = document.querySelector('.hero-bg img');
-  if (heroBg) {
+  if (heroBg && window.innerWidth > 768) {
     window.addEventListener('scroll', () => {
       const scrollY = window.scrollY;
       if (scrollY < window.innerHeight) {
@@ -176,26 +179,41 @@ document.addEventListener('DOMContentLoaded', () => {
   const filterBtns = document.querySelectorAll('.filter-btn');
   const portfolioItems = document.querySelectorAll('.portfolio-item');
 
+  const applyFilter = (filter) => {
+    let visibleIndex = 0;
+    portfolioItems.forEach((item) => {
+      const matches = filter === 'all' || item.dataset.category === filter;
+      if (matches) {
+        item.style.display = '';
+        // Small stagger based on position within visible items (not global index)
+        const delay = Math.min(visibleIndex * 20, 300);
+        requestAnimationFrame(() => {
+          setTimeout(() => {
+            item.style.opacity = '1';
+            item.style.transform = 'scale(1) translateY(0)';
+          }, delay);
+        });
+        visibleIndex++;
+      } else {
+        item.style.opacity = '0';
+        item.style.transform = 'scale(0.95)';
+        item.style.display = 'none';
+      }
+    });
+  };
+
+  // Apply initial filter based on active button
+  if (filterBtns.length > 0 && portfolioItems.length > 0) {
+    const activeBtn = document.querySelector('.filter-btn.active');
+    const initialFilter = activeBtn ? activeBtn.dataset.filter : 'all';
+    applyFilter(initialFilter);
+  }
+
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       filterBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-
-      const filter = btn.dataset.filter;
-
-      portfolioItems.forEach((item, i) => {
-        if (filter === 'all' || item.dataset.category === filter) {
-          item.style.display = '';
-          setTimeout(() => {
-            item.style.opacity = '1';
-            item.style.transform = 'scale(1) translateY(0)';
-          }, i * 80);
-        } else {
-          item.style.opacity = '0';
-          item.style.transform = 'scale(0.9) translateY(20px)';
-          setTimeout(() => { item.style.display = 'none'; }, 400);
-        }
-      });
+      applyFilter(btn.dataset.filter);
     });
   });
 
@@ -288,27 +306,5 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
-
-  // --- Custom cursor ---
-  const cursor = document.querySelector('.custom-cursor');
-  const cursorDot = document.querySelector('.cursor-dot');
-
-  if (cursor && cursorDot && window.innerWidth > 768) {
-    document.addEventListener('mousemove', (e) => {
-      cursor.style.transform = `translate3d(${e.clientX - 20}px, ${e.clientY - 20}px, 0)`;
-      cursorDot.style.transform = `translate3d(${e.clientX - 4}px, ${e.clientY - 4}px, 0)`;
-    });
-
-    document.querySelectorAll('a, button, .project-card, .portfolio-item, .service-card, .tilt-3d').forEach(el => {
-      el.addEventListener('mouseenter', () => {
-        cursor.classList.add('cursor-hover');
-        cursorDot.classList.add('cursor-hover');
-      });
-      el.addEventListener('mouseleave', () => {
-        cursor.classList.remove('cursor-hover');
-        cursorDot.classList.remove('cursor-hover');
-      });
-    });
-  }
 
 });

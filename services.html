@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Services | A Design Studio</title>
-  <meta name="description" content="3D visualization services by A Design Studio - architectural, interior, exterior, and landscape visualization. Based in Surat, Gujarat.">
-  <meta name="keywords" content="3D rendering services, architectural visualization, interior rendering, exterior visualization, landscape design, Surat">
+  <meta name="description"
+    content="3D visualization services by A Design Studio - bathroom, bedroom, living, deck, public interiors, and private & public exteriors. Based in Surat, Gujarat.">
+  <meta name="keywords"
+    content="3D rendering services, interior rendering, exterior visualization, bathroom design, bedroom design, living room design, public interior, Surat">
   <meta name="author" content="A Design Studio">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#0a0a0a">
@@ -13,14 +16,14 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Services | A Design Studio">
-  <meta property="og:description" content="Comprehensive 3D visualization services - architectural, interior, exterior, and landscape visualization.">
-  <meta property="og:image" content="assets/images/IMG_20260413_114241_477.jpg">
+  <meta property="og:description" content="Comprehensive 3D visualization services - interior and exterior.">
+  <meta property="og:image" content="assets/images/bathroom interior/BATHROOM 2 VIEW 1.jpg">
   <meta property="og:site_name" content="A Design Studio">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Services | A Design Studio">
-  <meta name="twitter:description" content="Comprehensive 3D visualization services - architectural, interior, exterior, and landscape visualization.">
+  <meta name="twitter:description" content="Comprehensive 3D visualization services - interior and exterior.">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
@@ -28,20 +31,12 @@
   <!-- Fonts & Styles -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
-
-  <!-- Preloader -->
-  <div class="preloader">
-    <img src="assets/images/logo.jpg" alt="A Design Studio" class="preloader-logo">
-    <div class="preloader-bar"></div>
-  </div>
-
-  <!-- Custom Cursor -->
-  <div class="custom-cursor"></div>
-  <div class="cursor-dot"></div>
 
   <!-- Header -->
   <header class="header">
@@ -52,7 +47,6 @@
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="services.html" class="active">Services</a>
-      <a href="projects.html">Projects</a>
       <a href="contact.html">Contact</a>
       <div class="nav-cta">
         <a href="contact.html" class="btn btn-primary">Get Quote</a>
@@ -70,7 +64,6 @@
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="services.html" class="active">Services</a>
-    <a href="projects.html">Projects</a>
     <a href="contact.html">Contact</a>
     <a href="contact.html" class="btn btn-primary" style="margin-top: 20px;">Get Quote</a>
   </div>
@@ -79,93 +72,28 @@
   <section class="page-hero">
     <div class="container" style="text-align: center;">
       <span class="section-label">Our Services</span>
-      <h1>What We Offer</h1>
-      <p>Comprehensive 3D visualization solutions for every stage of your architectural project.</p>
+      <h1>Explore Our Work</h1>
+      <p>Browse our 3D visualization work across interior and exterior design categories.</p>
     </div>
   </section>
 
-  <!-- Services Detail -->
+  <!-- Services Gallery -->
   <section class="section">
     <div class="container">
 
-      <!-- Service 1: 3D Architectural Visualization -->
-      <div class="service-detail fade-in">
-        <div class="service-detail-img img-reveal">
-          <img src="assets/images/IMG_20260413_114241_477.jpg" alt="3D Architectural Visualization">
-        </div>
-        <div class="service-detail-text">
-          <span class="section-label">Service 01</span>
-          <h2>3D Architectural Visualization</h2>
-          <p>Our architectural visualization service transforms blueprints and design concepts into photorealistic 3D renders. These visuals help architects, developers, and clients see the complete picture before construction begins.</p>
-          <p>We handle projects of all scales - from individual residences to large commercial developments.</p>
-          <ul class="service-features">
-            <li>Photorealistic 3D rendering</li>
-            <li>Multiple angle views</li>
-            <li>Day and night scene options</li>
-            <li>Accurate material representation</li>
-            <li>High-resolution output for print and digital</li>
-          </ul>
-        </div>
+      <!-- Filter Bar -->
+      <div class="filter-bar fade-in">
+        <button class="filter-btn active" data-filter="bathroom">Bathroom</button>
+        <button class="filter-btn" data-filter="bedroom">Bedroom</button>
+        <button class="filter-btn" data-filter="living">Living</button>
+        <button class="filter-btn" data-filter="deck">Deck</button>
+        <button class="filter-btn" data-filter="public-interior">Public Interior</button>
+        <button class="filter-btn" data-filter="private-exterior">Private Exterior</button>
+        <button class="filter-btn" data-filter="public-exterior">Public Exterior</button>
       </div>
 
-      <!-- Service 2: Interior Visualization -->
-      <div class="service-detail reverse fade-in">
-        <div class="service-detail-img img-reveal">
-          <img src="assets/images/IMG_20260413_114236_770.jpg" alt="Interior Visualization">
-        </div>
-        <div class="service-detail-text">
-          <span class="section-label">Service 02</span>
-          <h2>Interior Visualization</h2>
-          <p>Our interior visualization brings your space designs to life with detailed renders that showcase furniture placement, material choices, lighting conditions, and spatial flow.</p>
-          <p>Perfect for residential interiors, commercial spaces, offices, and hospitality projects.</p>
-          <ul class="service-features">
-            <li>Detailed space and furniture layouts</li>
-            <li>Realistic lighting and shadow effects</li>
-            <li>Material and texture accuracy</li>
-            <li>Multiple design concept options</li>
-            <li>360-degree panoramic views</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Service 3: Exterior Visualization -->
-      <div class="service-detail fade-in">
-        <div class="service-detail-img img-reveal">
-          <img src="assets/images/IMG_20260413_152232_942.jpg" alt="Exterior Visualization">
-        </div>
-        <div class="service-detail-text">
-          <span class="section-label">Service 03</span>
-          <h2>Exterior Visualization</h2>
-          <p>High-quality exterior renders that showcase building facades, elevations, and architectural details from every angle. Our exterior visuals help communicate design intent to clients and approval authorities.</p>
-          <ul class="service-features">
-            <li>Building facade and elevation renders</li>
-            <li>Context-sensitive surroundings</li>
-            <li>Realistic sky, vegetation, and vehicles</li>
-            <li>Multiple viewpoint renders</li>
-            <li>Bird's eye and street-level perspectives</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Service 4: Landscape Visualization -->
-      <div class="service-detail reverse fade-in">
-        <div class="service-detail-img img-reveal">
-          <img src="assets/images/IMG_20260413_114241_477.jpg" alt="Landscape Visualization">
-        </div>
-        <div class="service-detail-text">
-          <span class="section-label">Service 04</span>
-          <h2>Landscape Visualization</h2>
-          <p>Complete outdoor environment visualization including gardens, pathways, water features, and surrounding landscapes. We create immersive outdoor visuals that complement your architectural renders.</p>
-          <ul class="service-features">
-            <li>Garden and outdoor space design</li>
-            <li>Vegetation and planting layouts</li>
-            <li>Hardscape and pathway rendering</li>
-            <li>Water feature visualization</li>
-            <li>Seasonal variation renders</li>
-          </ul>
-        </div>
-      </div>
-
+      <!-- Portfolio Grid (populated by JS from gallery-data.js) -->
+      <div class="portfolio-grid" id="portfolio-grid"></div>
     </div>
   </section>
 
@@ -178,12 +106,21 @@
       <div class="btn-group" style="justify-content: center;">
         <a href="contact.html" class="btn btn-primary">Get Quote</a>
         <a href="https://wa.me/919427171408" target="_blank" class="whatsapp-btn">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+          </svg>
           WhatsApp Us
         </a>
       </div>
     </div>
   </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox">
+    <button class="lightbox-close">&times;</button>
+    <img src="" alt="Project Preview">
+  </div>
 
   <!-- Footer -->
   <footer class="footer">
@@ -191,36 +128,46 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <img src="assets/images/without background.png" alt="A Design Studio">
-          <p>Specializing in high-quality 3D visualizations for architecture, interiors, exteriors, and landscapes.</p>
+          <p>Specializing in high-quality 3D visualizations for interiors and exteriors.</p>
         </div>
         <div class="footer-col">
           <h4>Navigation</h4>
           <a href="index.html">Home</a>
           <a href="about.html">About Us</a>
           <a href="services.html">Services</a>
-          <a href="projects.html">Projects</a>
           <a href="contact.html">Contact</a>
         </div>
         <div class="footer-col">
           <h4>Services</h4>
-          <a href="services.html">3D Visualization</a>
-          <a href="services.html">Interior Design</a>
-          <a href="services.html">Exterior Design</a>
-          <a href="services.html">Landscape Design</a>
+          <a href="services.html">Bathroom</a>
+          <a href="services.html">Bedroom</a>
+          <a href="services.html">Living</a>
+          <a href="services.html">Private Exterior</a>
+          <a href="services.html">Public Exterior</a>
         </div>
         <div class="footer-col">
           <h4>Contact</h4>
           <a href="mailto:adesignstudio2005@gmail.com">adesignstudio2005@gmail.com</a>
+          <a href="tel:+919427171408">+91 94271 71408</a>
           <a href="contact.html">Get Quote</a>
         </div>
       </div>
       <div class="footer-bottom">
         <p>&copy; 2026 A Design Studio. All rights reserved.</p>
-        <p>Crafted with precision</p>
+        <p>Surat, Gujarat, India</p>
       </div>
     </div>
   </footer>
 
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/919427171408" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    </svg>
+  </a>
+
+  <script src="assets/js/gallery-data.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
+
 </html>
