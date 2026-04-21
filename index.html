@@ -34,12 +34,16 @@
   <!-- Fonts & Styles -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Montserrat:wght@200;300;400;500;600&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
+
+  <!-- Cursor tag (appears on image hover) -->
+  <div class="cursor-tag" id="cursorTag">View</div>
 
   <!-- Header -->
   <header class="header">
@@ -78,9 +82,10 @@
     </div>
     <div class="hero-content">
       <span class="hero-label">3D Visualization Studio</span>
-      <h1>Transforming Ideas Into Realistic Visual Experiences</h1>
-      <p>We specialize in high-quality 3D architectural visualization, bringing your interior and exterior design
-        concepts to life with stunning detail and realism.</p>
+      <h1>
+        <span class="split-line"><span data-split>Transforming Ideas Into Realistic Visual Experiences</span></span>
+      </h1>
+      <p class="reveal-text"><span>We specialize in high-quality 3D architectural visualization, bringing your interior and exterior design concepts to life with stunning detail and realism.</span></p>
       <div class="btn-group">
         <a href="services.html" class="btn btn-primary btn-magnetic">Our Services</a>
         <a href="contact.html" class="btn btn-outline btn-magnetic">Get In Touch</a>
@@ -103,81 +108,102 @@
           exterior to life.</p>
       </div>
 
-      <div class="service-categories">
+      <div class="service-categories editorial">
 
-        <a href="services.html" class="service-category-card fade-in delay-1">
+        <a href="services.html" class="service-category-card svc-1 fade-in" data-cursor-tag="View">
+          <span class="card-index">01</span>
           <div class="service-category-img">
             <img src="assets/images/bathroom interior/BATHROOM 2 VIEW 1.jpg" alt="Bathroom Interior">
           </div>
           <div class="service-category-info">
-            <span class="service-category-tag">Interior</span>
-            <h3>Bathroom Interior</h3>
+            <div class="service-category-meta">
+              <span class="service-category-tag">Interior</span>
+              <h3>Bathroom Interior</h3>
+            </div>
             <span class="service-category-arrow">&rarr;</span>
           </div>
         </a>
 
-        <a href="services.html" class="service-category-card fade-in delay-2">
+        <a href="services.html" class="service-category-card svc-2 fade-in" data-cursor-tag="View">
+          <span class="card-index">02</span>
           <div class="service-category-img">
             <img src="assets/images/bedroom interior/01_View01.jpg" alt="Bedroom Interior">
           </div>
           <div class="service-category-info">
-            <span class="service-category-tag">Interior</span>
-            <h3>Bedroom Interior</h3>
+            <div class="service-category-meta">
+              <span class="service-category-tag">Interior</span>
+              <h3>Bedroom Interior</h3>
+            </div>
             <span class="service-category-arrow">&rarr;</span>
           </div>
         </a>
 
-        <a href="services.html" class="service-category-card fade-in delay-3">
+        <a href="services.html" class="service-category-card svc-3 fade-in" data-cursor-tag="View">
+          <span class="card-index">03</span>
           <div class="service-category-img">
             <img src="assets/images/living interior/01_View01.jpg" alt="Living Interior">
           </div>
           <div class="service-category-info">
-            <span class="service-category-tag">Interior</span>
-            <h3>Living Interior</h3>
+            <div class="service-category-meta">
+              <span class="service-category-tag">Interior</span>
+              <h3>Living Interior</h3>
+            </div>
             <span class="service-category-arrow">&rarr;</span>
           </div>
         </a>
 
-        <a href="services.html" class="service-category-card fade-in delay-1">
+        <a href="services.html" class="service-category-card svc-4 fade-in" data-cursor-tag="View">
+          <span class="card-index">04</span>
           <div class="service-category-img">
             <img src="assets/images/deck interior/LIVING AREA VIEW  (18).jpg" alt="Deck Interior">
           </div>
           <div class="service-category-info">
-            <span class="service-category-tag">Interior</span>
-            <h3>Deck Interior</h3>
+            <div class="service-category-meta">
+              <span class="service-category-tag">Interior</span>
+              <h3>Deck Interior</h3>
+            </div>
             <span class="service-category-arrow">&rarr;</span>
           </div>
         </a>
 
-        <a href="services.html" class="service-category-card fade-in delay-2">
+        <a href="services.html" class="service-category-card svc-5 fade-in" data-cursor-tag="View">
+          <span class="card-index">05</span>
           <div class="service-category-img">
             <img src="assets/images/public interior/RAIPUR LOBBY VIEW (2).jpg" alt="Public Interior">
           </div>
           <div class="service-category-info">
-            <span class="service-category-tag">Interior</span>
-            <h3>Public Interior</h3>
+            <div class="service-category-meta">
+              <span class="service-category-tag">Interior</span>
+              <h3>Public Interior</h3>
+            </div>
             <span class="service-category-arrow">&rarr;</span>
           </div>
         </a>
 
-        <a href="services.html" class="service-category-card fade-in delay-3">
+        <a href="services.html" class="service-category-card svc-6 fade-in" data-cursor-tag="View">
+          <span class="card-index">06</span>
           <div class="service-category-img">
             <img src="assets/images/private exterior/01_View01.jpg" alt="Private Exterior">
           </div>
           <div class="service-category-info">
-            <span class="service-category-tag">Exterior</span>
-            <h3>Private Exterior</h3>
+            <div class="service-category-meta">
+              <span class="service-category-tag">Exterior</span>
+              <h3>Private Exterior</h3>
+            </div>
             <span class="service-category-arrow">&rarr;</span>
           </div>
         </a>
 
-        <a href="services.html" class="service-category-card fade-in delay-1">
+        <a href="services.html" class="service-category-card svc-7 fade-in" data-cursor-tag="View">
+          <span class="card-index">07</span>
           <div class="service-category-img">
             <img src="assets/images/public exterior/01.jpg" alt="Public Exterior">
           </div>
           <div class="service-category-info">
-            <span class="service-category-tag">Exterior</span>
-            <h3>Public Exterior</h3>
+            <div class="service-category-meta">
+              <span class="service-category-tag">Exterior</span>
+              <h3>Public Exterior</h3>
+            </div>
             <span class="service-category-arrow">&rarr;</span>
           </div>
         </a>

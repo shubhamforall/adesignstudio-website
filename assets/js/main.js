@@ -26,6 +26,93 @@ document.addEventListener('DOMContentLoaded', () => {
     }).join('');
   }
 
+  // --- Split text into words for line-by-line reveal ---
+  document.querySelectorAll('[data-split]').forEach((el, lineIdx) => {
+    const text = el.textContent.trim();
+    const words = text.split(/\s+/);
+    el.innerHTML = words.map((word, wordIdx) => {
+      const delay = (lineIdx * 120) + (wordIdx * 45);
+      return `<span class="split-word" style="--d: ${delay}ms">${word}</span>`;
+    }).join(' ');
+  });
+
+  // Trigger split reveals on hero shortly after load (so words drop into place)
+  requestAnimationFrame(() => {
+    setTimeout(() => {
+      document.querySelectorAll('.hero-v2 .hero-title').forEach(el => {
+        el.classList.add('revealed');
+        el.querySelectorAll('.split-line').forEach(l => l.classList.add('revealed'));
+      });
+      document.querySelectorAll('.hero-v2 .reveal-text').forEach(el => {
+        el.classList.add('visible');
+      });
+    }, 300);
+  });
+
+  // Also make all .split-line wrappers trigger when they scroll into view
+  const splitObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        splitObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  document.querySelectorAll('.split-line').forEach(el => splitObserver.observe(el));
+
+  // --- Cursor tag (elegant "View" label on image hover) ---
+  const cursorTag = document.getElementById('cursorTag');
+  if (cursorTag && window.matchMedia('(hover: hover)').matches) {
+    let tagX = 0, tagY = 0, currentX = 0, currentY = 0;
+    let activeEl = null;
+
+    document.addEventListener('mousemove', (e) => {
+      tagX = e.clientX;
+      tagY = e.clientY;
+    });
+
+    // Smooth follow with easing
+    const animate = () => {
+      currentX += (tagX - currentX) * 0.2;
+      currentY += (tagY - currentY) * 0.2;
+      cursorTag.style.left = currentX + 'px';
+      cursorTag.style.top = currentY + 'px';
+      requestAnimationFrame(animate);
+    };
+    animate();
+
+    document.querySelectorAll('[data-cursor-tag]').forEach(el => {
+      el.addEventListener('mouseenter', () => {
+        activeEl = el;
+        cursorTag.textContent = el.dataset.cursorTag;
+        cursorTag.classList.add('visible');
+      });
+      el.addEventListener('mouseleave', () => {
+        if (activeEl === el) {
+          activeEl = null;
+          cursorTag.classList.remove('visible');
+        }
+      });
+    });
+  }
+
+  // --- Magnetic elements ---
+  const magneticEls = document.querySelectorAll('.magnetic, .btn-magnetic');
+  if (window.matchMedia('(hover: hover)').matches) {
+    magneticEls.forEach(el => {
+      const strength = parseFloat(el.dataset.magnetic) || 0.25;
+      el.addEventListener('mousemove', (e) => {
+        const rect = el.getBoundingClientRect();
+        const x = (e.clientX - rect.left - rect.width / 2) * strength;
+        const y = (e.clientY - rect.top - rect.height / 2) * strength;
+        el.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+      });
+      el.addEventListener('mouseleave', () => {
+        el.style.transform = 'translate3d(0, 0, 0)';
+      });
+    });
+  }
+
   // --- Header scroll effect ---
   const header = document.querySelector('.header');
   if (header) {
@@ -247,20 +334,50 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- Contact form ---
+  // --- Contact form (FormSubmit AJAX) ---
   const contactForm = document.querySelector('.contact-form');
   if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       const btn = contactForm.querySelector('.btn');
       const originalText = btn.textContent;
-      btn.textContent = 'Message Sent!';
-      btn.style.background = '#25d366';
-      contactForm.reset();
+      const originalBg = btn.style.background;
+
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+
+      try {
+        // FormSubmit AJAX endpoint - convert regular action to AJAX endpoint
+        const action = contactForm.getAttribute('action').replace(
+          'formsubmit.co/',
+          'formsubmit.co/ajax/'
+        );
+
+        const formData = new FormData(contactForm);
+        const response = await fetch(action, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          btn.textContent = 'Message Sent!';
+          btn.style.background = '#25d366';
+          contactForm.reset();
+        } else {
+          btn.textContent = 'Error — Try Again';
+          btn.style.background = '#d84848';
+        }
+      } catch (err) {
+        btn.textContent = 'Network Error';
+        btn.style.background = '#d84848';
+      }
+
       setTimeout(() => {
         btn.textContent = originalText;
-        btn.style.background = '';
-      }, 3000);
+        btn.style.background = originalBg;
+        btn.disabled = false;
+      }, 3500);
     });
   }
 
