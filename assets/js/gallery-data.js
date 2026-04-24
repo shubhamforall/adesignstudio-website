@@ -37,6 +37,13 @@ const GALLERY_DATA = [
   { category: 'bedroom', label: 'Bedroom Interior', title: 'Pizzan Bhai Room — 1',     file: 'bedroom interior/pizzan bhai room (1).jpg' },
   { category: 'bedroom', label: 'Bedroom Interior', title: 'Pizzan Bhai Room — 2',     file: 'bedroom interior/pizzan bhai room (2).jpg' },
   { category: 'bedroom', label: 'Bedroom Interior', title: 'Pizzan Bhai Room — 3',     file: 'bedroom interior/pizzan bhai room (3).jpg' },
+  { category: 'bedroom', label: 'Bedroom Interior', title: 'Majlis Lounge — View 1',   file: 'bedroom interior/02_View01.jpg' },
+  { category: 'bedroom', label: 'Bedroom Interior', title: 'Kohli Bedroom — Detail',   file: 'bedroom interior/02_View02.jpg' },
+  { category: 'bedroom', label: 'Bedroom Interior', title: 'Majlis Lounge — View 2',   file: 'bedroom interior/02_View03.jpg' },
+  { category: 'bedroom', label: 'Bedroom Interior', title: 'Majlis Lounge — View 3',   file: 'bedroom interior/02_View04.jpg' },
+  { category: 'bedroom', label: 'Bedroom Interior', title: 'Kohli Bedroom — View 1',   file: 'bedroom interior/02_View05.jpg' },
+  { category: 'bedroom', label: 'Bedroom Interior', title: 'Kohli Bedroom — View 2',   file: 'bedroom interior/02_View06.jpg' },
+  { category: 'bedroom', label: 'Bedroom Interior', title: 'Kohli Bedroom — View 3',   file: 'bedroom interior/02_View07.jpg' },
 
   // --- Living Interior ---
   { category: 'living', label: 'Living Interior', title: 'Living — View 1',     file: 'living interior/01_View01.jpg' },
@@ -123,6 +130,10 @@ const GALLERY_DATA = [
   { category: 'private-exterior', label: 'Private Exterior', title: 'Private Residence — View 2',  file: 'private exterior/01_View02.jpg' },
   { category: 'private-exterior', label: 'Private Exterior', title: 'Private Residence — View 3',  file: 'private exterior/01_View03.jpg' },
   { category: 'private-exterior', label: 'Private Exterior', title: 'Nashik Bungalow — View 13',   file: 'private exterior/NASHIK BUNGLOW VIEW (13).jpg' },
+  { category: 'private-exterior', label: 'Private Exterior', title: 'Private Bungalow — View 1',   file: 'private exterior/02_View01.jpg' },
+  { category: 'private-exterior', label: 'Private Exterior', title: 'Private Bungalow — View 2',   file: 'private exterior/02_View02.jpg' },
+  { category: 'private-exterior', label: 'Private Exterior', title: 'Private Bungalow — View 3',   file: 'private exterior/02_View03.jpg' },
+  { category: 'private-exterior', label: 'Private Exterior', title: 'Private Bungalow — View 4',   file: 'private exterior/02_View04.jpg' },
 
   // --- Public Exterior ---
   { category: 'public-exterior', label: 'Public Exterior', title: 'Public Building — 1',  file: 'public exterior/01.jpg' },
